@@ -15,7 +15,10 @@ class Fraction:
     def __init__(self, wholeNumber, numerator, denominator):
         self.wholeNumber = wholeNumber
         self.numerator = numerator
-        self.denominator = denominator
+        if (denominator == 0):
+            raise ValueError("Denominator must not be zero.")
+        else:
+            self.denominator = denominator
 
     def makeImproper(self):
         self.numerator = (self.wholeNumber * self.denominator) + self.numerator
@@ -42,7 +45,7 @@ class Fraction:
             string = f'{self.numerator}/{self.denominator}'
         return string
 
-f1 = Fraction(0, 26, 12)
-print(f1.toString())
-f1.reduce()
-print(f1.toString())
+# f1 = Fraction(0, 26, 12)
+# print(f1.toString())
+# f1.reduce()
+# print(f1.toString())
