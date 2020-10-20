@@ -4,7 +4,7 @@ class UserDialogue:
     def __init__(self):
         self.f1 = None
         self.f2 = None
-        self.result = None
+        self.result = Fraction(0, 0, 1)
     
     def retrieveFraction(self):
         whole = int(input("Please Enter a Whole Number: "))
@@ -23,7 +23,7 @@ class UserDialogue:
             string = f'{fraction.wholeNumber} {fraction.numerator}/{fraction.denominator}'
         else:
             string = f'{fraction.numerator}/{fraction.denominator}'
-        print(string)
+        print(string, end="")
 
 
 # ud = UserDialogue()
